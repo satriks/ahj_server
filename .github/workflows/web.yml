@@ -1,4 +1,4 @@
-name:  AHJ dnd task 2
+name:  AHJ server
 
 on: [push, pull_request]
 
