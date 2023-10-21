@@ -4,10 +4,9 @@
   "description": "",
   "main": "index.js",
   "scripts": {
-    "start": "webpack-dev-server --mode development",
-    "build": "webpack --mode production",
+    "start": "forever server.js",
+    "watch": "forever -w server.js",
     "lint": "eslint .",
-    "test": "jest",
     "doc": "jsdoc -c jsdoc.conf.json"
   },
   "author": "coursar",
@@ -22,10 +21,14 @@
     "eslint": "^8.45.0",
     "eslint-config-standard": "^17.1.0",
     "eslint-plugin-import": "^2.27.5",
+    "forever": "^4.0.3",
     "standard": "^17.1.0"
-
   },
   "dependencies": {
-    "core-js": "^3.6.5"
+    "@koa/cors": "^4.0.0",
+    "core-js": "^3.6.5",
+    "koa": "^2.14.2",
+    "koa-body": "^6.0.1",
+    "uuid": "^9.0.1"
   }
 }
