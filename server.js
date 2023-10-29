@@ -15,6 +15,11 @@ const desc2 = 'Lorem ipsum dolor sit amet consectetur adipisicing elit. Providen
 
 let tickets = [new TicketFull('test', 'Описание тестового тикета'), new TicketFull('task2', desc2)]
 
+app.use(async (ctx, next) => {
+  ctx.set('Access-Control-Allow-Origin', '*');
+  ctx.set('Access-Control-Allow-Methods', 'POST, GET, PUT, DELETE, OPTIONS');
+  await next();
+});
 // GET
 app.use(async (ctx, next) => {
   const { method, id } = ctx.request.query
